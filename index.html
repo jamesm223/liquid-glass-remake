@@ -8,6 +8,31 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    
+    <div class="controls">
+        <button data-mode="portrait" id="port-btn" class="glass"><img src="https://img.icons8.com/?size=100&id=VSgzdWa473-d&format=png&color=000000" alt=""></button>
+        <button data-mode="landscape" id="land-btn" class="glass"><img src="https://img.icons8.com/?size=100&id=VSgzdWa473-d&format=png&color=000000" alt="" id="land-img"></button>
+    </div>
+    <div class="cards">
+        <div class="card-wrapper basic-card glass portrait" id="cardWrapper">
+            <div class="profile-card">
+                <img src="https://ik.imagekit.io/bertbigbite/placeholder-image.webp?updatedAt=1746710764174" alt="">
+                <div class="profile-details">
+                    <h1>Basic Card</h1>
+                    <h2>Unnamed Container</h2>
+                    <p>Inherits the generic styles in the unnamed query.</p>
+                </div>
+            </div>
+        </div>
+        <div class="card-wrapper advanced-card glass portrait" id="cardWrapper">
+            <div class="profile-card">
+                <img src="https://ik.imagekit.io/bertbigbite/placeholder-image.webp?updatedAt=1746710764174" alt="">
+                <div class="profile-details">
+                    <h1>Advanced Card</h1>
+                    <h2>Named Container</h2>
+                    <p>Inherits the generic styles and the specific styles from the named container, overwriting the generic styles.</p>
+                </div> 
+            </div>
+        </div>
+    </div>
 </body>
 </html>

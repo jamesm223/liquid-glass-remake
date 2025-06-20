@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(https://ik.imagekit.io/bertbigbite/photo-1700422301302-c0f83f89fb79.jpeg?updatedAt=1750085620384);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    animation: slide 15s ease-in infinite alternate;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+#back {
+    z-index: 0;
+}
+
+.controls {
+    z-index: 99;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 200px;
+}
+
+
+button {
+    width: 100px;
+    height: 70px;
+    border-radius: 25px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button img {
+    height: 50px;
+    width: 50px;
+    
+}
+
+#land-img {
+    transform: rotate(90deg);
+
+}
+
+button:focus{
+    background-color: rgba(128, 128, 128, 0.35);
+    transition: ease-in-out .2s;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    background: rgba(128, 128, 128, 0.3);
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+
+.card-wrapper {
+    container-type: inline-size;
+	border-radius: 12px;
+	overflow: auto;
+	padding: 1rem;
+	transition: width 0.3s, height 0.3s;
+}
+
+.profile-card img {
+	border-radius: 50%;
+	width: 80px;
+	height: 80px;
+}
+
+.profile-card h2 {
+	margin: 0;
+	font-size: 1.2rem;
+}
+
+.profile-card p {
+	margin: 0;
+	color: #373636;
+    font-weight: 500;
+}
+
+.card-wrapper.portrait {
+    width: 300px;
+    height: 400px;
+  }
+  
+.card-wrapper.landscape {
+    width: 600px;
+    height: 300px;
+  }
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 200vh;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    z-index: 99;
+}
+
+.basic-card {
+    container-type: inline-size;
+  }
+  
+.advanced-card {
+    container-name: card;
+    container-type: inline-size;
+  }
+
+
+  .glass {
+    position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 2rem;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2), 
+                inset 0 4px 20px rgba(255, 255, 255, 0.3);
+  }
+
+  .glass::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2rem;
+    backdrop-filter: blur(4px);
+    box-shadow: inset -10px -8px 0px -11px rgba(255, 255, 255, 1),
+                inset 0px -9px 0px -8px rgba(255, 255, 255, 1);
+    opacity: 0.6;
+    z-index: -1;
+    filter: blur(1px) drop-shadow(10px 4px 6px black) brightness(150%);
+  }
+
+@container (min-width: 500px) {
+    .profile-card {
+      flex-direction: row;
+      align-items: left;
+      text-align: left;
+      gap: 1.5rem;
+    }
+  
+    .profile-card img {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .profile-card h2 {
+      font-size: 1.5rem;
+    }
+  
+    .profile-card p {
+      font-size: 1rem;
+    }
+  }
+
+@container card (min-width: 500px) {
+    .profile-card img {
+        height: 200px;
+        clip-path: inset(round 10px);
+        border-radius: 25px;
+    }
+}
+
+@keyframes slide{
+    from {
+        background-position: center top;
+      }
+    to {
+        background-position: center bottom;
+      }
+}
+
