@@ -23,7 +23,8 @@
                 </div>
             </div>
         </div>
-        <div class="card-wrapper advanced-card glass portrait" id="cardWrapper">
+        <div class="card-wrapper advanced-card portrait" id="cardWrapper">
+            <div class="background"></div>
             <div class="profile-card">
                 <img src="https://ik.imagekit.io/bertbigbite/placeholder-image.webp?updatedAt=1746710764174" alt="">
                 <div class="profile-details">
@@ -34,5 +35,11 @@
             </div>
         </div>
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+          <filter id="largeDistortion">
+            <feTurbulence type="turbulence" baseFrequency="0.01 0.01" numOctaves="0.1" seeds="1" result="turbulence"/>
+            <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="30" xChannelSelector="R" yChannelSelector="G"/>
+          </filter>
+      </svg>
 </body>
 </html>
